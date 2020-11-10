@@ -9,16 +9,13 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '15'
 
 repositories {
+	mavenLocal()
 	mavenCentral()
 	maven { url 'https://repo.spring.io/milestone' }
 	maven { url 'https://repo.spring.io/snapshot' }
 }
 
 dependencies {
+	compile group: 'com.ulger.sk.usermanager', name: 'user-manager-core', version:'1.0-SNAPSHOT'
 	implementation 'org.springframework.boot:spring-boot-starter'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-}
-
-test {
-	useJUnitPlatform()
 }
